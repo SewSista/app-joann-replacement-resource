@@ -1,11 +1,15 @@
 //import React from 'react';
 //import './App.css'
+import Footer from './components/layout/Footer'
+import Header from "./components/layout/Header"
 
 function App() {
 
   return (
     <>
-      <h1>Hello, Launchcode!</h1>
+      <Header />
+      <Footer />
+      
     </>
   )
 }
