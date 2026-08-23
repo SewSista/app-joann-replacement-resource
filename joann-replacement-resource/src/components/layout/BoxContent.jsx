@@ -1,17 +1,18 @@
 import { storeDetails } from '../../stores/storeDetails.js';
-import Box from './BoxFrame';
+//import Box from './BoxFrame';
 
 function BoxContent () {   
-    let storesJSX = [...storeDetails].map((stores) => {
-        return <Box key={stores.id} stores={stores} />; 
+    let storeJSX = [...storeDetails].map((store) => {
+        return < storeDetails key={store.id} />; //Box key={store.id}*/ 
     });
     
     return (
         <div>
-            storeDetails.length ? 
-                <div>{storesJSX}</div>,
-        </div>,
+            storeDetails.length ? (
+                <div>{storeJSX}</div>),
+        </div>
     );
 }
+
 
 export default BoxContent;
