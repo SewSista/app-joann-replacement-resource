@@ -2,7 +2,8 @@
 //import './App.css'
 import Footer from './components/layout/Footer';
 import Header from './components/layout/Header';
-import BoxContent from './components/common/BoxContent';  
+import StoreForm from './components/form/StoreForm';
+//import BoxContent from './components/common/BoxContent';  
 
 
 function App() {
@@ -12,7 +13,7 @@ function App() {
       <Header />
       <p>
         <div>
-        <BoxContent />
+        <StoreForm />
         </div>
       </p>
       <Footer />

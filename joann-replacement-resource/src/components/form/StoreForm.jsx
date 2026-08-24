@@ -48,6 +48,7 @@ function StoreForm() {
                         type="text"
                         id="nameField"
                         name="name"
+                        placeholder="Store name"
                         value={formData.name}
                         onChange={handleChange}
                         required
@@ -60,6 +61,7 @@ function StoreForm() {
                         type="url"
                         id="webField"
                         name="web"
+                        placeholder="Paste website here"
                         value={formData.web}
                         onChange={handleChange}
                     />
@@ -71,6 +73,7 @@ function StoreForm() {
                         type="email"
                         id="emailField"
                         name="email"
+                        placeholder="Email address"
                         value={formData.email}
                         onChange={handleChange}
                     />
@@ -82,6 +85,7 @@ function StoreForm() {
                         type="tel"
                         id="phoneField"
                         name="phone"
+                        placeholder="123-456-7890"
                         pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                         value={formData.phone}
                         onChange={handleChange}
@@ -91,15 +95,16 @@ function StoreForm() {
                 <label>
                     Address:
                     <input
-                        type="text"
+                        type="textera"
                         id="addressField"
                         name="address"
-                        value={formData.name}
+                        placeholder="Physical address/location"
+                        value={formData.address}
                         onChange={handleChange}
                     />
                 </label>
                 <br />
-                <button type="submit">Submit</button> 
+                <button type="submit" id="submitButton">Submit</button> 
             </form>
         </div>
     );
