@@ -1,8 +1,8 @@
-const Box = (props) => {
+const Box = (children) => {
 
     return (
-        <div>
-            {props.children}
+        <div className={`box`}>
+            {children}
         </div>
     );
 };

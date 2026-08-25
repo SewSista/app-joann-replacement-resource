@@ -1,21 +1,23 @@
-import { storeDetails } from '../pages/stores/storeDetails.js';
-//import Box from './BoxFrame';
+import Box from "./BoxFrame";
 
-function BoxContent () {   
-    //let storeJSX = [...storeDetails].map((store) => {
-        //return < storeDetails key={store.id} />; //Box key={store.id}*/ 
-    //});
-    
+const BoxContent = ({ store }) => {
     return (
-        <div>
-            
-        </div>
-    );
+        <Box>
+            <div className="store-details-info">
+                <h2 className="artwork-details-name">{store.name}</h2>
+                <h3>
+                    className="artwork-details-web"{store.web},
+                    className="artwork-details-email"{store.email},
+                    className="artwork-details-phone"{store.phone},
+                    className="artwork-details-address"{store.address},
+                </h3>
+
+            </div>
+        </Box>
+    )
 }
 
-
 export default BoxContent;
-
 /*
 storeDetails.length ? ( 
     <div>{storeJSX}</div>)
