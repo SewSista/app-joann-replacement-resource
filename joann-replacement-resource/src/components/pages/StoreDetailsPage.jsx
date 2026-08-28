@@ -1,4 +1,4 @@
-import StoreFrame from "./StoreFrame";
+import StoreFrame from "../stores/StoreFrame";
 //import { storeDetails } from "./stores-data/storeDetails";
 
 function StoreDetailsPage (stores) {                    //need to figure out correct import method for details array
@@ -18,7 +18,7 @@ function StoreDetailsPage (stores) {                    //need to figure out cor
             </main>
         </div>
     );
-}
+};
 
 
 export default StoreDetailsPage;

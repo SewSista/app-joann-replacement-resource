@@ -1,4 +1,4 @@
-const AboutPage = ( setCurrentPage ) => {
+const AboutPage = ({ setCurrentPage }) => {
     return (
         <main>
             <div>
