@@ -1,8 +1,8 @@
 import StoreFrame from "../stores/StoreFrame";
 //import { storeDetails } from "./stores-data/storeDetails";
 
-function StoreDetailsPage (stores) {                    //need to figure out correct import method for details array
-    let storeJSX = [...stores].map(store => {
+const StoreDetailsPage = ({stores}) => {                    //need to figure out correct import method for details array
+    const storeJSX = [...stores].map(store => {
         return <StoreFrame key={store.id} store={store} />;
     });
     
