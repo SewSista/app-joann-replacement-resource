@@ -1,5 +1,4 @@
-//import Frame from "../common/Frame";
-import { storeDetails } from "../../stores-data/storeDetails";
+import { storeDetails } from "../../../stores-data/storeDetails";
 
 const StoreFrame = () => {
     return (

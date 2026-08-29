@@ -1,4 +1,4 @@
-import StoreFrame from "../stores/StoreFrame";
+import StoreFrame from "./StoreFrame";
 //import { storeDetails } from "./stores-data/storeDetails";
 
 const StoreDetailsPage = ({stores}) => {                    //need to figure out correct import method for details array
@@ -11,9 +11,9 @@ const StoreDetailsPage = ({stores}) => {                    //need to figure out
             <main>
                 <h1>Store Info</h1>
                 <div>
-                    <ul>
+                    
                     {storeJSX}
-                    </ul>
+                    
                 </div>
             </main>
         </div>
