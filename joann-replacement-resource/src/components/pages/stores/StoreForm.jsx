@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Button from "../../common/Button";
 
 function StoreForm() {
     const [formData, setFormData] = useState({
@@ -104,7 +105,10 @@ function StoreForm() {
                     />
                 </label>
                 <br />
-                <button type="submit" id="submitButton">Submit</button> 
+                 <Button
+                type="submit"
+                label="Submit"
+                /> 
             </form>
         </div>
     );

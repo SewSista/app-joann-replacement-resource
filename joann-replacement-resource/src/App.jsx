@@ -1,5 +1,5 @@
 //import React from 'react';
-//import './App.css'
+import './App.css'
 import Header from './components/layout/Header.jsx';
 import Footer from './components/layout/Footer.jsx';
 import AboutPage from './components/pages/AboutPage.jsx';

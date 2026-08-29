@@ -1,7 +1,9 @@
-export default function Button({ onClick, text }) {
+const Button = ({type, label, handleClick }) => {
     return (
-        <button onClick={onClick}>
-            {text}
+        <button type={type} onClick={handleClick}>
+            {label}
         </button>
     );
-}
+};
+
+export default Button;
