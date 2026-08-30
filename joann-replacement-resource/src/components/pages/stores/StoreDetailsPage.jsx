@@ -1,10 +1,12 @@
 import { useState } from "react";
 import StoreFrame from "./StoreFrame";
 import Button from "../../common/Button";
-import StoreForm from "./StoreForm";
+import StoreForm from "./form/StoreForm";
+import { storeDetails } from "./stores-data/storeDetails";
 
 
-const StoreDetailsPage = ({stores = [] }) => {                    //need to figure out correct import method for details array
+
+const StoreDetailsPage = ({stores = storeDetails }) => {                    //need to figure out correct import method for details array
    
     const handleOpenForm = () => {        
         setOpenForm((previousValue) => !previousValue);
