@@ -10,7 +10,13 @@ const StoreFrame = ({ store }) => {
                     <li>
                     <h2>{store.name}</h2>    
                         <div>
-                            {store.web}<br/>
+                            <a
+                                href={store.web}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                {store.web}
+                            </a><br/>
                             {store.email}<br/>
                             {store.phone}<br/>
                             {store.address}
