@@ -5,11 +5,7 @@ import StoreForm from "./StoreForm";
 
 
 const StoreDetailsPage = ({stores = [] }) => {                    //need to figure out correct import method for details array
-    
-    const storeJSX = stores.map(store => {
-        return <StoreFrame key={store.id} store={store} />;
-    });
-
+   
     const handleOpenForm = () => {        
         setOpenForm((previousValue) => !previousValue);
     };
@@ -20,9 +16,12 @@ const StoreDetailsPage = ({stores = [] }) => {                    //need to figu
         <div>
             <h1>Store Info</h1>
             <div>
-                
-                {storeJSX}
-                
+               {stores.map((store) => (
+                <StoreFrame
+                    key={store.id}
+                    store={store}
+                />
+               ))}
             </div>
 
             <div>
