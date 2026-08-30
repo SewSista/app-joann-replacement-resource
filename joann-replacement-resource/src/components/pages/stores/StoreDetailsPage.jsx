@@ -2,6 +2,7 @@ import { useState } from "react";
 import StoreFrame from "./StoreFrame";
 import Button from "../../common/Button";
 import StoreForm from "./StoreForm";
+import Frame from "../../common/Frame";
 //import { storeDetails } from "./stores-data/storeDetails";
 
 const StoreDetailsPage = ({stores}) => {                    //need to figure out correct import method for details array
@@ -31,9 +32,9 @@ const StoreDetailsPage = ({stores}) => {                    //need to figure out
                 handleClick={handleOpenForm}
                 />
                 {openForm && (
-                    <div>
-                        <StoreForm  />              
-                    </div>    
+                    <Frame>
+                        <StoreForm handleCloseForm={handleOpenForm} />              
+                    </Frame>    
                 )} 
             </div>
             

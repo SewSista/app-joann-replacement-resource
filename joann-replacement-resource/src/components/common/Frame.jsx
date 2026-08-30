@@ -1,4 +1,4 @@
-const Frame = (children) => {
+const Frame = ({ children }) => {
 
     return (
         <div>

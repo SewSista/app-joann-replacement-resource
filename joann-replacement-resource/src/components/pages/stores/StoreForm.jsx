@@ -41,7 +41,7 @@ function StoreForm() {
 
     return(
         <div>
-            <h1>Store Info</h1>
+            <h1>New Store Info</h1>
             <form onSubmit={handleSubmit}>
                 <label>
                     Name:
@@ -59,7 +59,7 @@ function StoreForm() {
                 <label>
                     Website:
                     <input
-                        type="url"
+                        type="text"
                         id="webField"
                         name="web"
                         placeholder="Paste website here"

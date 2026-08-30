@@ -4,7 +4,6 @@ import Header from './components/layout/Header.jsx';
 import Footer from './components/layout/Footer.jsx';
 import AboutPage from './components/pages/AboutPage.jsx';
 import StoreDetailsPage from './components/pages/stores/StoreDetailsPage.jsx';
-import StoreForm from './components/pages/stores/StoreForm.jsx';
 import { storeDetails } from './stores-data/storeDetails.js';
 import { useState } from 'react';
 
@@ -17,7 +16,6 @@ const [currentPage, setCurrentPage] = useState('home');
       <Header/> 
       {currentPage === "home" && <AboutPage setCurrentPage={setCurrentPage} />}
       {currentPage === "stores" && <StoreDetailsPage stores={storeDetails} />}
-      {currentPage === <StoreForm />}
       <Footer/>
     </div>
   );
