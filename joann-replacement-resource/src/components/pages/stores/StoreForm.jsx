@@ -35,7 +35,6 @@ function StoreForm() {
                 phone: "",
                 address: ""
             });
-            alert("You've added a new store to the directory!");
             console.log("Store info submission:", formData);
         }
     }

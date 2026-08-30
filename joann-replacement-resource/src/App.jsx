@@ -5,23 +5,31 @@ import Header from './components/layout/Header.jsx';
 import Footer from './components/layout/Footer.jsx';
 import AboutPage from './components/pages/AboutPage.jsx';
 import StoreDetailsPage from './components/pages/stores/StoreDetailsPage.jsx';
+import HomePage from './components/pages/HomePage.jsx';
 
 
 function App() {
 
   const [currentPage, setCurrentPage] = useState('home');
   const [stores, setStores] = useState([]);
+  const [about, setAbout] = useState([]);
 
   return (
     <div>
       <Header/> 
-      {currentPage === "home" && (<AboutPage setCurrentPage={setCurrentPage} />)}
+      {currentPage === "home" && (<HomePage setCurrentPage={setCurrentPage} />)}
       {currentPage === "stores" && (
         <StoreDetailsPage 
           stores={stores}
           setStores={setStores}
         />
       )}
+      {currentPage === "about" && (
+        <AboutPage
+        about={about}
+        setAbout={setAbout}
+        />
+        )}
       <Footer/>
     </div>
   );
