@@ -14,13 +14,13 @@ const StoreDetailsPage = ({store = storeDetails }) => {
         setStores((currentStores) => 
             currentStores.filter((store) => store.id !== id)
         );
-    };
-   
-    const handleOpenForm = () => {        
-        setOpenForm((previousValue) => !previousValue);
-    };
+    }; //function to remove store when Remove button (in Store Frame component) clicked and render new array
     
     const [ openForm, setOpenForm ] = useState(false);
+    
+    const handleOpenForm = () => {        
+        setOpenForm((previousValue) => !previousValue);
+    }; //function to open form on Add New Store button click
     
     return (
         <main>

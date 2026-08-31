@@ -47,14 +47,15 @@ const StoreForm = ({ handleCloseForm }) => {
             setMessage(inputMsg.reqFields);
             setHasMsg(true); 
             return;
-        }
+        } //if input data doesn't pass validation, message displyed and can't submit form
         
         setMessage(inputMsg.submission);    
         setHasMsg(true);
+        //if data passes validation, message is displayed after submit button clicked
         
         setTimeout(() => {
             handleCloseForm();
-        }, 1500);        
+        }, 1500);    // submission message has prolonged display time   
     };
 
     return(
