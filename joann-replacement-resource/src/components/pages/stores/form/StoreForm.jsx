@@ -81,6 +81,7 @@ const StoreForm = ({ handleCloseForm }) => {
                             id="webField"
                             name="web"
                             placeholder="Web address"
+                            pattern="(?:https?://)?[a-z0-9.\x2D]+\.[a-z]{2,}(?:/[^\s]*)?"
                             value={formData.web}
                             onChange={handleChange}
                         />
@@ -93,6 +94,9 @@ const StoreForm = ({ handleCloseForm }) => {
                             id="emailField"
                             name="email"
                             placeholder="Email address"
+                            minLength={5}
+                            maxLength={100}
+                            pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
                             value={formData.email}
                             onChange={handleChange}
                         />
