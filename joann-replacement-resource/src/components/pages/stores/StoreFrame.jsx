@@ -25,8 +25,8 @@ const StoreFrame = ({ store }) => {
                 </ul> 
 
                 <Button
-                    type="delete"
-                    label="Delete Store"
+                    type="remove"
+                    label="Remove Store"
                 /> 
             </div>
         </Frame>
@@ -34,7 +34,3 @@ const StoreFrame = ({ store }) => {
 }
 
 export default StoreFrame;
-/*
-storeDetails.length ? ( 
-    <div>{storeJSX}</div>)
-*/
