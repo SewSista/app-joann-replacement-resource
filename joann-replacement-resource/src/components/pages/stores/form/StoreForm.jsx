@@ -1,9 +1,12 @@
 import { useState } from "react";
 import Button from "../../../common/Button";
-import FormErrorMessage from "./FormError";
 import Frame from "../../../common/Frame";
+import InputMessage from "./InputMessage";
 
-const errorMessage = 'Please complete Store Name & at least 1 contact field';
+const inputMsg = {
+    reqFields: 'Please complete Store Name & at least 1 contact field',
+    submission: 'You added a new store to the directory!',
+};
 
 const StoreForm = ({ handleCloseForm }) => {
     const [formData, setFormData] = useState({
@@ -13,10 +16,10 @@ const StoreForm = ({ handleCloseForm }) => {
         phone: "",
         address: "",
     });
-
-    const [hasError, setHasError] = useState(false);
-
-     
+    
+    const [hasMsg, setHasMsg] = useState(false);
+    const [message, setMessage] = useState("");    
+    
     const isValid = () => {
         return (
             formData.name.trim() !== '' &&
@@ -24,8 +27,8 @@ const StoreForm = ({ handleCloseForm }) => {
             formData.email.trim() !== '' ||
             formData.phone.trim() !== '' ||
             formData.address.trim() !== '')
-        )
-    }
+        );
+    };
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -33,16 +36,25 @@ const StoreForm = ({ handleCloseForm }) => {
             ...prevData,
             [name]: value,
         }));
+
+        setHasMsg(false);
     };
    
     const handleSubmit = (e) => {
         e.preventDefault();
-            if (!isValid()) {
-                setHasError(true);
-            } else {
-            alert("You've added a new store to the directory!");
+        
+        if (!isValid()) {
+            setMessage(inputMsg.reqFields);
+            setHasMsg(true); 
+            return;
+        }
+        
+        setMessage(inputMsg.submission);    
+        setHasMsg(true);
+        
+        setTimeout(() => {
             handleCloseForm();
-        };
+        }, 1500);        
     };
 
     return(
@@ -59,7 +71,6 @@ const StoreForm = ({ handleCloseForm }) => {
                             placeholder="Store name"
                             value={formData.name}
                             onChange={handleChange}
-                            required
                         />
                     </label>
                     <br />
@@ -102,8 +113,7 @@ const StoreForm = ({ handleCloseForm }) => {
                     <br />
                     <label>
                         Address:
-                        <input
-                            type="textera"
+                        <textarea
                             id="addressField"
                             name="address"
                             placeholder="Physical address/location"
@@ -111,11 +121,12 @@ const StoreForm = ({ handleCloseForm }) => {
                             onChange={handleChange}
                         />
                     </label>
-                      <FormErrorMessage
-                        hasError={hasError}
-                        message={[errorMessage]}    
+                      <InputMessage
+                        hasMsg={hasMsg}
+                        message={message}    
                     />
                     <br />
+
                     <Button
                     type="submit"
                     label="Submit"

@@ -2,7 +2,7 @@ import { useState } from "react";
 import StoreFrame from "./StoreFrame";
 import Button from "../../common/Button";
 import StoreForm from "./form/StoreForm";
-import { storeDetails } from "./stores-data/storeDetails";
+import { storeDetails } from "../../../stores-data/storeDetails";
 
 
 
@@ -25,7 +25,7 @@ const StoreDetailsPage = ({stores = storeDetails }) => {                    //ne
                 />
                ))}
             </div>
-
+               
             <div>
                 <Button
                 type= "button"
