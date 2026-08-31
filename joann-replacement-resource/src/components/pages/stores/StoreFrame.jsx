@@ -1,7 +1,7 @@
 import Button from "../../common/Button";
 import Frame from "../../common/Frame";
 
-const StoreFrame = ({ store }) => {
+const StoreFrame = ({ store, onRemove }) => {
 
     return (
         <Frame>
@@ -27,6 +27,7 @@ const StoreFrame = ({ store }) => {
                 <Button
                     type="remove"
                     label="Remove Store"
+                    handleClick={() => onRemove(store.id)}
                 /> 
             </div>
         </Frame>

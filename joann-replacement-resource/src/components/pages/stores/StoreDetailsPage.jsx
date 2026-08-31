@@ -3,10 +3,18 @@ import StoreFrame from "./StoreFrame";
 import Button from "../../common/Button";
 import StoreForm from "./form/StoreForm";
 import { storeDetails } from "../../../stores-data/storeDetails";
+import { Link } from "react-router";
 
 
 
-const StoreDetailsPage = ({stores = storeDetails }) => {                    //need to figure out correct import method for details array
+const StoreDetailsPage = ({store = storeDetails }) => {
+    const [ stores, setStores ] = useState(store);
+
+    const removeStore = (id) => {
+        setStores((currentStores) => 
+            currentStores.filter((store) => store.id !== id)
+        );
+    };
    
     const handleOpenForm = () => {        
         setOpenForm((previousValue) => !previousValue);
@@ -15,31 +23,34 @@ const StoreDetailsPage = ({stores = storeDetails }) => {                    //ne
     const [ openForm, setOpenForm ] = useState(false);
     
     return (
-        <div>
-            <h1>Store Info</h1>
+        <main>
             <div>
-               {stores.map((store) => (
-                <StoreFrame
-                    key={store.id}
-                    store={store}
-                />
-               ))}
-            </div>
-               
-            <div>
-                <Button
-                type= "button"
-                label= "Add new store"
-                handleClick={handleOpenForm}
-                />
-                {openForm && (
+                <p><Link to="/">Home</Link></p>
+                    <h1>Store Info</h1>
                     <div>
-                        <StoreForm handleCloseForm={handleOpenForm} />              
-                    </div>    
-                )} 
+                    {stores.map((store) => (
+                        <StoreFrame
+                            key={store.id}
+                            store={store}
+                            onRemove={removeStore}
+                        />
+                    ))}
+                    </div>
+                    
+                    <div>
+                        <Button
+                        type= "button"
+                        label= "Add new store"
+                        handleClick={handleOpenForm}
+                        />
+                        {openForm && (
+                            <div>
+                                <StoreForm handleCloseForm={handleOpenForm} />              
+                            </div>    
+                        )} 
+                    </div>
             </div>
-            
-        </div>
+        </main>
     );
 };
 
