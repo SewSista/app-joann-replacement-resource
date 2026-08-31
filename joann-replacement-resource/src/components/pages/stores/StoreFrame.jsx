@@ -6,27 +6,23 @@ const StoreFrame = ({ store, onRemove }) => {
     return (
         <Frame>
             <div className="store-details-info">
-                <ul> 
-                    <li>
-                    <h2>{store.name}</h2>    
-                        <div>
-                            <a
+             <h2>{store.name}</h2>    
+                    <div>
+                        <ul> 
+                            <li><a
                                 href={store.web}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                            >
-                                {store.web}
-                            </a><br/>
-                            {store.email}<br/>
-                            {store.phone}<br/>
-                            {store.address}
-                        </div>
-                    </li>
-                </ul> 
+                            >{store.web}</a></li>                            
+                            <li>{store.email}</li>
+                            <li>{store.phone}</li>
+                            <li>{store.address}</li>
+                        </ul> 
+                    </div>
 
                 <Button
                     type="remove"
-                    label="Remove Store"
+                    label="Remove"
                     handleClick={() => onRemove(store.id)}
                 /> 
             </div>
