@@ -24,27 +24,27 @@ const StoreDetailsPage = ({store = storeDetails }) => {
     
     return (
         <main>
-            <div>
+            <div className="store-details-page">
                 <p><Link to="/">Home</Link></p>
                     <h1>Store Info</h1>
-                    <div>
-                    {stores.map((store) => (
-                        <StoreFrame
-                            key={store.id}
-                            store={store}
-                            onRemove={removeStore}
-                        />
-                    ))}
+                    <div className="store-details-info">
+                        {stores.map((store) => (
+                            <StoreFrame
+                                key={store.id}
+                                store={store}
+                                onRemove={removeStore}
+                            />
+                        ))}
                     </div>
                     
-                    <div>
+                    <div className="add-store">
                         <Button
-                        type= "button"
-                        label= "Add new store"
+                        type= "add"
+                        label= "Add Store"
                         handleClick={handleOpenForm}
                         />
                         {openForm && (
-                            <div>
+                            <div className="form">
                                 <StoreForm handleCloseForm={handleOpenForm} />              
                             </div>    
                         )} 

@@ -5,7 +5,7 @@ const StoreFrame = ({ store, onRemove }) => {
 
     return (
         <Frame>
-            <div className="store-details-info">
+            <div>
                 <div> 
                 <h2>{store.name}</h2>    
                     <ul> 
@@ -18,13 +18,13 @@ const StoreFrame = ({ store, onRemove }) => {
                         <li>{store.phone}</li>
                         <li>{store.address}</li>
                     </ul> 
-                </div>
-
+                
                 <Button
                     type="remove"
                     label="Remove"
                     handleClick={() => onRemove(store.id)}
                 /> 
+               </div>
             </div>
         </Frame>
     )

@@ -109,7 +109,7 @@ const StoreForm = ({ handleCloseForm }) => {
                             type="tel"
                             id="phoneField"
                             name="phone"
-                            placeholder="123-456-7890 (include dashes)"
+                            placeholder="555-555-5555"
                             pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                             value={formData.phone}
                             onChange={handleChange}
