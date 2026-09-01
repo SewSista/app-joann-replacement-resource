@@ -7,6 +7,8 @@ body {
 }
 
 header {
+  display: flex;
+  flex-direction: column;
   background-color: #b4bce7;
   color: #101120;
   font-size: x-large;
@@ -17,6 +19,8 @@ header {
 }
 
 footer {
+  display: flex;
+  flex-direction: column;
   background-color: #b4bce7;
   color: #101120;
   font-size: medium;
@@ -51,59 +55,3 @@ a:hover {
   color:#8c7ece
 }
 
-.store-details-page {
-  background-color: #e2e1e7;
-  padding: 2px;
-  font-size: 15x;
-  text-align: center;
-}
-
-.store-details-info {
-  display: grid;
-  place-content: center;
-  grid-template-columns: auto auto;
-  background-color: #5e4d8b;
-  padding: 10px;
-  gap: 6px;
-}
-
-.store-details-info div {
-  background-color: #efeff3;
-  padding: 10px;
-  font-size: 30px;
-  text-align: center;
-}
-
-.store-details-info button {
-  align-items: center;
-  color: aliceblue;
-  text-align: center;
-  background-color: #bb194a;
-  padding: 1x;
-  gap: 5px;
-}
-
-.add-store {
-  align-items: center;
-  color: rgb(5, 5, 5);
-  text-align: center;
-  background-color: #b4bce7;
-  padding: 1x;
-  gap: 5px;
-}
-
-.add-store button {
-  align-items: center;
-  color: aliceblue;
-  text-align: center;
-  background-color: #5e4d8b;
-  padding: 1x;
-  gap: 5px;
-}
-
-.form {
-  background-color: #e2e1e7;
-  padding: 2px;
-  font-size: 15x;
-  text-align: center;
-}

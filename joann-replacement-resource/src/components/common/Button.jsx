@@ -1,7 +1,10 @@
+import "./button-animation.css";
+
 const Button = ({type, label, handleClick }) => {
     return (
-        <button type={type} onClick={handleClick}>
-            {label}
+        <button className="animate"
+        type={type} onClick={handleClick}>
+            <span className="front">{label}</span>
         </button>
     );
 };
