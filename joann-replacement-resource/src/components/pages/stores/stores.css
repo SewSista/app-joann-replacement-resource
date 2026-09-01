@@ -1,0 +1,51 @@
+.store-details-page {
+  background-color: #e2e1e7;
+  padding: 1rem;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.store-details-info {
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  background-color: #4b6039;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.store-details-info div {
+  background-color: #efeff3;
+  padding: .25rem;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.add-store {
+  align-items: center;
+  color: rgb(5, 5, 5);
+  text-align: center;
+  background-color: #4b776a;
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form {
+  background-color: #e4e1e7;
+  padding: .5rem;
+  font-size: 1rem;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+    .store-details-info {
+        flex-basis: auto;
+    }
+}
+
+@media (max-width: 900px) {
+    .store-details-info {
+        flex-basis: auto;
+    }
+}

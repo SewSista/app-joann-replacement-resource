@@ -1,0 +1,23 @@
+.animate {
+  background: #46664b;
+  border-radius: 6px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 1.5px;
+}
+
+.front {
+  display: block;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 1.25 rem;
+  background: #6e9271;
+  color: white;
+  transform: translateY(-6px);
+}
+
+.animate:active .front {
+  transform: translateY(-2px);
+}
+
