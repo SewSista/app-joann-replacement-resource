@@ -1,18 +1,18 @@
 .animate {
-  background: hsl(249, 100%, 32%);
-  border-radius: 12px;
+  background: #46664b;
+  border-radius: 6px;
   border: none;
   padding: 0;
   cursor: pointer;
-  outline-offset: 4px;
+  outline-offset: 1.5px;
 }
 
 .front {
   display: block;
-  padding: 12px 42px;
-  border-radius: 12px;
-  font-size: 1.25rem;
-  background: hsl(263, 100%, 47%);
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 1.25 rem;
+  background: #6e9271;
   color: white;
   transform: translateY(-6px);
 }
